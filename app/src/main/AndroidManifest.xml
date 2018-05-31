@@ -23,7 +23,15 @@
             android:theme="@style/No_title_bar" />
         <activity
             android:name=".RegisterActivity"
-            android:theme="@style/No_title_bar" ></activity>
+            android:theme="@style/No_title_bar" />
+
+        <service android:name=".MyService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".DashboardActivity"></activity>
     </application>
 
 </manifest>

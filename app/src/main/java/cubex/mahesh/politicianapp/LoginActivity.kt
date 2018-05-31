@@ -37,10 +37,14 @@ class LoginActivity : AppCompatActivity() {
                 et2?.text.toString())?.addOnCompleteListener(object : OnCompleteListener<AuthResult> {
             override fun onComplete(task: Task<AuthResult>) {
 
-                Toast.makeText(this@LoginActivity,
-                        task.isSuccessful.toString(),
-                        Toast.LENGTH_LONG)
-
+                if(task.isSuccessful) {
+                    startActivity(Intent(this@LoginActivity,
+                            DashboardActivity::class.java))
+                }else{
+                    Toast.makeText(this@LoginActivity,
+                            "Invalid User...",
+                            Toast.LENGTH_LONG)
+                }
             }
 
         })
@@ -52,9 +56,7 @@ class LoginActivity : AppCompatActivity() {
                 et2?.text.toString())?.addOnCompleteListener(object : OnCompleteListener<AuthResult> {
             override fun onComplete(task: Task<AuthResult>) {
 
-                Toast.makeText(this@LoginActivity,
-                        task.isSuccessful.toString(),
-                        Toast.LENGTH_LONG)
+
             if(task.isSuccessful) {
                 startActivity(Intent(this@LoginActivity,
                         RegisterActivity::class.java))
