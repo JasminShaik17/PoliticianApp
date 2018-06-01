@@ -13,11 +13,13 @@
         android:layout_margin="10dp">
 
         <android.support.v7.widget.CardView
+            android:id="@+id/previous_events"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:layout_margin="5dp"
-            app:cardCornerRadius="5dp">
+            app:cardCornerRadius="5dp"
+            android:onClick="load">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -25,20 +27,21 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:layout_margin="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="0.8"
-                    android:src="@drawable/ic_launcher_background"/>
+                    android:layout_weight="0.7"
+                    android:src="@drawable/view_events"/>
 
                 <TextView
                     android:fontFamily="cursive"
                     android:textColor="#E3425F"
                     android:text="Previous Events"
                     android:textStyle="bold"
-                    android:textSize="20sp"
+                    android:textSize="25sp"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
-                    android:layout_weight="0.2"
+                    android:layout_weight="0.3"
                     android:layout_gravity="center"/>
 
             </LinearLayout>
@@ -47,6 +50,8 @@
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
+            android:id="@+id/next_events"
+            android:onClick="load"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
@@ -58,20 +63,21 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:layout_margin="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="0.8"
-                    android:src="@drawable/ic_launcher_background"/>
+                    android:layout_weight="0.7"
+                    android:src="@drawable/upcoming"/>
 
                 <TextView
                     android:fontFamily="cursive"
                     android:textColor="#E3425F"
                     android:text="Next Events"
                     android:textStyle="bold"
-                    android:textSize="20sp"
+                    android:textSize="25sp"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
-                    android:layout_weight="0.2"
+                    android:layout_weight="0.3"
                     android:layout_gravity="center"/>
 
             </LinearLayout>
@@ -89,6 +95,8 @@
         android:orientation="horizontal"
         android:layout_margin="10dp">
         <android.support.v7.widget.CardView
+            android:id="@+id/messages"
+            android:onClick="load"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
@@ -101,20 +109,21 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:layout_margin="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="0.8"
-                    android:src="@drawable/ic_launcher_background"/>
+                    android:layout_weight="0.7"
+                    android:src="@drawable/messages"/>
 
                 <TextView
                     android:fontFamily="cursive"
                     android:textColor="#E3425F"
-                    android:text="Politician Messages"
+                    android:text="Messages"
                     android:textStyle="bold"
-                    android:textSize="20sp"
+                    android:textSize="25sp"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
-                    android:layout_weight="0.2"
+                    android:layout_weight="0.3"
                     android:layout_gravity="center"/>
 
             </LinearLayout>
@@ -122,6 +131,8 @@
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
+            android:id="@+id/complaint"
+            android:onClick="load"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
@@ -134,20 +145,21 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:layout_margin="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="0.8"
-                    android:src="@drawable/ic_launcher_background"/>
+                    android:layout_weight="0.7"
+                    android:src="@drawable/complaint"/>
 
                 <TextView
                     android:fontFamily="cursive"
                     android:textColor="#E3425F"
                     android:text="Questions"
                     android:textStyle="bold"
-                    android:textSize="20sp"
+                    android:textSize="25sp"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
-                    android:layout_weight="0.2"
+                    android:layout_weight="0.3"
                     android:layout_gravity="center"/>
 
             </LinearLayout>
@@ -165,6 +177,8 @@
         android:layout_margin="10dp">
 
         <android.support.v7.widget.CardView
+            android:id="@+id/user"
+            android:onClick="load"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
@@ -176,26 +190,29 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:layout_margin="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="0.8"
-                    android:src="@drawable/ic_launcher_background"/>
+                    android:layout_weight="0.7"
+                    android:src="@drawable/user"/>
 
                 <TextView
                     android:fontFamily="cursive"
                     android:textColor="#E3425F"
-                    android:text="Comming Soon"
+                    android:text="Edit Profile"
                     android:textStyle="bold"
-                    android:textSize="20sp"
+                    android:textSize="25sp"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
-                    android:layout_weight="0.2"
+                    android:layout_weight="0.3"
                     android:layout_gravity="center"/>
 
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
+            android:id="@+id/contactus"
+            android:onClick="load"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
@@ -207,20 +224,21 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:layout_margin="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="0.8"
-                    android:src="@drawable/ic_launcher_background"/>
+                    android:layout_weight="0.7"
+                    android:src="@drawable/contactus"/>
 
                 <TextView
                     android:fontFamily="cursive"
                     android:textColor="#E3425F"
-                    android:text="Comming Soon"
+                    android:text="ContactUs"
                     android:textStyle="bold"
-                    android:textSize="20sp"
+                    android:textSize="25sp"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
-                    android:layout_weight="0.2"
+                    android:layout_weight="0.3"
                     android:layout_gravity="center"/>
 
             </LinearLayout>
